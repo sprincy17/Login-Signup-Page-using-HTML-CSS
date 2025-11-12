@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.outer {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+.outer > .left {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.left > h1 {
+    font-style: italic;
+    position: absolute;
+    top: 25px;
+    left: 50px;
+}
+
+.left > form {
+    display: flex;
+    flex-direction: column; 
+    padding: 20px;
+    border: 2px solid cornsilk;
+}
+
+.left > form > label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.left > form > input {
+    padding: 10px;
+    width: 300px;
+    margin-left: 5px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+form > button {
+    width: 300px;
+    margin-left: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    background-color: cornflowerblue;
+    border: none;
+}
+
+form > #link {
+    text-align: center;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+form > .bottom {
+    border: 2px solid cornsilk;
+    padding: 20px;
+    margin-top: 10px;
+    font-size: 15px;
+    width: 300px;
+    text-align: center;
+}
+
+.right> img{
+    width: 50vw;
+    height: 700px;
+}
+
+ 
+@media screen and (max-width:1024px){
+    .outer{
+        /* flex-direction: column; */
+        width: 100%;
+        height: auto;
+        align-items: center;
+    }
+
+    .left > h1{
+        position: static;
+        font-size: 28px;
+        margin-bottom: 5px;
+    }
+
+    .left > form {
+        padding: 10px;
+    }
+
+    .left > form > input {
+        margin-bottom: 5px;
+    }
+
+    form > .bottom {
+       text-align: center;
+       margin-top: 5px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .outer {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .left > h1 {
+        position: static;
+        font-size: 23px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}

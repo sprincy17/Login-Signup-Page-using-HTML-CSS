@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.full {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+.full > .left {
+    display: flex;
+    justify-content: center;
+}
+
+.left > img {
+    /* height: 100vh; */
+    width: 50vw;
+}
+
+.full > .right {
+    /* background-color:lightblue; */
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    position: relative;
+}
+
+.right > h1{
+    font-weight: bold;
+    font-style: italic;
+    position: absolute;
+    top: 50px;
+    left: 30px;
+}
+
+.right > h3 {
+    font-weight: bold;
+    font-style: italic;
+    position: absolute;
+    top: 90px;
+    left: 60px;
+}
+
+.right > form {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid cornsilk;
+    padding: 20px;
+}
+
+.right > form > label {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+form > input {
+    padding: 10px;
+    width: 295px;
+    margin-left: 5px;
+    border-radius: 10px;
+}
+
+form > button {
+    width: 300px;
+    border-radius: 10px;
+    margin-top: 30px;
+    padding: 10px;
+    background-color:cornflowerblue;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.right > form > #link {
+    margin-top: 10px;
+    /* text-decoration: none; */
+    text-align: center;
+    font-size: 16px;
+}
+
+form > h4 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+form > #pass {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.right > .bottom {
+    width: 345px;
+    margin-top: 20px;
+    border: 2px solid cornsilk;
+    padding: 15px;
+    font-size: 16px;
+    text-align: center;
+}
+
+
+
+@media (max-width: 1024px) {
+  .full {
+    /* flex-direction: column; */
+    align-items: center;
+    height: auto;
+  }
+
+  .right {
+    width: 100%;
+    margin-top: 20px; 
+  }
+
+  .right > h1 {
+    position: static;
+    margin-bottom: 5px;
+    font-size: 30px;
+  }
+
+  .right > h3 {
+    position: static;
+    margin-bottom: 10px;
+  }
+
+  .bottom {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .full {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left > img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* .right {
+    width: 100%;
+    text-align: center;
+  } */
+
+  .right > h1,
+  .right > h3 {
+    position: static;
+  }
+
+  .right > h1 {
+    font-size: 22px;
+  }
+
+} 
